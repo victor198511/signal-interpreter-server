@@ -9,7 +9,7 @@ def test_my_routes_function(mock_get_signal_title):
     my_app_instance = signal_interpreter_app.test_client()
 
     with my_app_instance as client:
-        my_payload = {"Security Access": "27"}
-        response = client.post("/", json=my_payload)
+        my_payload = {"signal": "27"}
         mock_get_signal_title.return_value = "Security Access"
+        response = client.post("/", json=my_payload)
         assert response.get_json() == "Security Access"
