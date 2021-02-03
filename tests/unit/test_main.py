@@ -19,6 +19,6 @@ def test_parse_arguments(mock_parse_args, mock_add_argument):
     mock_add_argument.assert_called_with("--file_path")
 
 
-#def test_load_file():
-#    with patch("builtins.open", mock_open(read_data={"services": [{"title": "ECU Reset", "id": "11"}]})):
-#        assert json_parser.load_file("signal_database.json") == {"services": [{"title": "ECU Reset", "id": "11"}]}
+def test_load_file():
+    with patch("builtins.open", mock_open(read_data={"services": [{"title": "ECU Reset", "id": "11"}]})):
+        assert json_parser.load_file("signal_database.json") == {"services": [{"title": "ECU Reset", "id": "11"}]}
