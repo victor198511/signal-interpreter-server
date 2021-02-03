@@ -6,9 +6,10 @@ class JsonParser:
 
     def load_file(self, file_path):
         # open the json file
-        with open(file_path) as json_file:
+        with open(file_path, "r") as json_file:
             # load the json file and save it to self.data
             self.data = json.load(json_file)
+            return self.data
 
     def get_signal_title(self, identifier):
         # loop through all services in self.data

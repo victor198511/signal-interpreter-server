@@ -12,10 +12,11 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    signal_database = json_parser.load_file(args.file_path)
-    signal_title = json_parser.get_signal_title("27")
-    print(signal_title)
-    # signal_interpreter_app.run()
+    json_parser.load_file(args.file_path)
+    # signal_database = json_parser.load_file(args.file_path)
+    # signal_title = json_parser.get_signal_title("27")
+    # print(signal_title)
+    signal_interpreter_app.run()
 
 if __name__ == "__main__":
     main()
