@@ -1,6 +1,5 @@
 from unittest.mock import patch
 from signal_interpreter_server.routes import signal_interpreter_app
-from signal_interpreter_server.json_parser import JsonParser
 from signal_interpreter_server.routes import JsonParser
 
 
