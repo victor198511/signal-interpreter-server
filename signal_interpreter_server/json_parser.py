@@ -20,8 +20,10 @@ class JsonParser:
     def get_signal_title(self, identifier):
         # loop through all services in self.data
         # if the service ID is the identifier, return the title
-        title_var = ""
+        title_var = "No signal title found for this id"
         for line_in_data in self.data["services"]:
             if line_in_data["id"] == identifier:
                 title_var = line_in_data["title"]
+#            else:
+#                title_var = str("No signal title found for this id")
         return title_var
