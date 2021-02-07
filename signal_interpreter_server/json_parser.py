@@ -1,5 +1,11 @@
 # json_parser.py
+# pylint: disable=missing-module-docstring
+# pylint: disable=missing-class-docstring
+# pylint: disable=missing-function-docstring
+
 import json
+
+
 class JsonParser:
     def __init__(self):
         self.data = None
@@ -14,6 +20,10 @@ class JsonParser:
     def get_signal_title(self, identifier):
         # loop through all services in self.data
         # if the service ID is the identifier, return the title
-        for p in self.data["services"]:
-            if p["id"] == identifier:
-                return p["title"]
+        title_var = ""
+        for line_in_data in self.data["services"]:
+            if line_in_data["id"] == identifier:
+                title_var = line_in_data["title"]
+            else:
+                title_var = ""
+        return title_var
