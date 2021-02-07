@@ -24,6 +24,4 @@ class JsonParser:
         for line_in_data in self.data["services"]:
             if line_in_data["id"] == identifier:
                 title_var = line_in_data["title"]
-            else:
-                title_var = ""
         return title_var
