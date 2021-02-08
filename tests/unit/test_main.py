@@ -1,5 +1,5 @@
 from unittest.mock import patch
-from signal_interpreter_server.main import main, parse_arguments, ArgumentParser
+from signal_interpreter_server.main import main, init, parse_arguments, ArgumentParser
 from signal_interpreter_server.json_parser import JsonParser
 
 
@@ -37,3 +37,10 @@ def test_main(mock_parse_arguments, mock_load_file, mock_run):
     main()
     # mock_load_file.assert_called_with(MockArgs.file_path)
     mock_run.assert_called_once()
+
+
+@patch("signal_interpreter_server.main.main")
+@patch("signal_interpreter_server.main.__name__", "__main__")
+def test_init(mock_main):
+    init()
+    mock_main.assert_called_once()
