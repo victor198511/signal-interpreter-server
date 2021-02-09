@@ -1,6 +1,4 @@
 # routes.py
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-function-docstring
 
 from flask import Flask, request, jsonify
 from signal_interpreter_server.json_parser import JsonParser

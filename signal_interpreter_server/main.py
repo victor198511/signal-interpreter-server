@@ -1,6 +1,4 @@
 # main.py
-# pylint: disable=missing-module-docstring
-# pylint: disable=missing-function-docstring
 
 from argparse import ArgumentParser
 from signal_interpreter_server.routes import signal_interpreter_app
