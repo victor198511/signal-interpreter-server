@@ -23,16 +23,17 @@ class JsonParser:
     def get_signal_title(self, identifier):
         # loop through all services in self.data
         # if the service ID is the identifier, return the title
-        service_title = "No signal title found for this id"
+        # service_title = "No signal title found for this id"
+        service_title = "Null"
         for service in self.data["services"]:
             if service["id"] == identifier:
                 service_title = service["title"]
 
         try:
-            if service_title == "No signal title found for this id":
+            if service_title == "Null":
                 raise JsonParserError
         except JsonParserError:
-            abort(404, description="Signal not found 1")
+            abort(404, description="Signal not found")
         return service_title
 
 #            else:
