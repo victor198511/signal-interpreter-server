@@ -9,6 +9,7 @@ mock = "*"
 patch = "*"
 pytest = "*"
 pylint = "*"
+pyyaml = "*"
 
 [dev-packages]
 pycodestyle = "*"
