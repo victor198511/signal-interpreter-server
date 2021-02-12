@@ -1,19 +1,8 @@
 # main.py
 
-import logging.config
-import os
-
 from argparse import ArgumentParser
-import yaml
 from signal_interpreter_server.routes import signal_interpreter_app
 from signal_interpreter_server.routes import json_parser
-
-CURR_DIR = os.path.abspath(os.path.dirname(__file__))
-LOG_SETTINGS_PATH = os.path.join(CURR_DIR, "..", "cfg", "log_settings.yaml")
-
-with open(LOG_SETTINGS_PATH, "r") as f:
-    config = yaml.safe_load(f.read())
-    logging.config.dictConfig(config)
 
 
 def parse_arguments():

@@ -1,10 +1,21 @@
 # json_parser.py
 # pylint: disable=missing-class-docstring
 
+import os
+import logging.config
 import logging
 import json
+import yaml
 from flask import abort
 from signal_interpreter_server.exceptions import JsonParserError
+
+
+CURR_DIR = os.path.abspath(os.path.dirname(__file__))
+LOG_SETTINGS_PATH = os.path.join(CURR_DIR, "..", "cfg", "log_settings.yaml")
+
+with open(LOG_SETTINGS_PATH, "r") as f:
+    config = yaml.safe_load(f.read())
+    logging.config.dictConfig(config)
 
 logger = logging.getLogger(__name__)
 
@@ -45,7 +56,7 @@ class JsonParser:
             # print(f"Got exception: Signal with ID: {identifier} was not found in database")
             logger.exception("Exception occurred: %s ", err)
             logger.error("Requested signal not found in database, signal ID: %s ", identifier)
-            logger.info("Aborting server ... %s")
+            logger.info("Aborting server ...")
             abort(404, description="Signal not found")
         return service_title
 

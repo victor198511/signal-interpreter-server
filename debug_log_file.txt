@@ -1,2 +1,8 @@
 
 2021-02-12 07:39:38,430 - werkzeug - INFO - 127.0.0.1 - - [12/Feb/2021 07:39:38] "[33mPOST / HTTP/1.1[0m" 404 -
+2021-02-12 11:47:09,908 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database
+2021-02-12 11:47:09,909 - signal_interpreter_server.json_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'signal_database' 
+2021-02-12 11:47:09,910 - signal_interpreter_server.json_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>
+2021-02-12 12:03:18,898 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-12 12:03:18,900 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-12 12:03:18,942 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
