@@ -3,9 +3,7 @@
 
 import logging
 import json
-from flask import abort
 from signal_interpreter_server.exceptions import JsonParserError
-
 
 logger = logging.getLogger(__name__)
 
@@ -33,21 +31,10 @@ class JsonParser:
         # loop through all services in self.data
         # if the service ID is the identifier, return the title
         # service_title = "No signal title found for this id"
-        service_title = "Null"
+        service_title = "None"
         for service in self.data["services"]:
             if service["id"] == identifier:
                 service_title = service["title"]
-
-        try:
-            if service_title == "Null":
-                logger.info("Raising exception: %s", JsonParserError)
-                raise JsonParserError
-        except JsonParserError as err:
-            # print(f"Got exception: Signal with ID: {identifier} was not found in database")
-            logger.exception("Exception occurred: %s ", err)
-            logger.error("Requested signal not found in database, signal ID: %s ", identifier)
-            logger.info("Aborting server ...")
-            abort(404, description="Signal not found")
         return service_title
 
 #            else:

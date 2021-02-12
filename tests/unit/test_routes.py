@@ -1,10 +1,12 @@
+import pytest
 from unittest.mock import patch
 from signal_interpreter_server.routes import signal_interpreter_app
-from signal_interpreter_server.routes import JsonParser
+from signal_interpreter_server.routes import JsonParser, interpret_signal
+from signal_interpreter_server.exceptions import JsonParserError
 
 
 @patch.object(JsonParser, "get_signal_title")
-def test_my_routes_function(mock_get_signal_title):
+def test_interpret_signal(mock_get_signal_title):
     signal_interpreter_app.testing = True
     my_app_instance = signal_interpreter_app.test_client()
 
@@ -13,3 +15,4 @@ def test_my_routes_function(mock_get_signal_title):
         mock_get_signal_title.return_value = "Security Access"
         response = client.post("/", json=my_payload)
         assert response.get_json() == "Security Access"
+
