@@ -419,3 +419,8 @@ signal_interpreter_server.exceptions.JsonParserError
 2021-02-12 20:15:46,611 - signal_interpreter_server.json_parser - INFO - Loading json database file: my_file_path
 2021-02-12 20:17:33,493 - signal_interpreter_server.json_parser - INFO - Opening json database file: my_file_path
 2021-02-12 20:17:33,498 - signal_interpreter_server.json_parser - INFO - Loading json database file: my_file_path
+2021-02-12 20:19:56,403 - signal_interpreter_server.json_parser - INFO - Opening json database file: my_file_path
+2021-02-12 20:19:56,407 - signal_interpreter_server.json_parser - INFO - Loading json database file: my_file_path
+2021-02-12 20:20:12,937 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_databas
+2021-02-12 20:20:12,938 - signal_interpreter_server.json_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'signal_databas' 
+2021-02-12 20:20:12,939 - signal_interpreter_server.json_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>

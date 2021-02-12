@@ -1,8 +1,6 @@
-import pytest
 from unittest.mock import patch
 from signal_interpreter_server.routes import signal_interpreter_app
-from signal_interpreter_server.routes import JsonParser, interpret_signal
-from signal_interpreter_server.exceptions import JsonParserError
+from signal_interpreter_server.routes import JsonParser
 
 
 @patch.object(JsonParser, "get_signal_title")
