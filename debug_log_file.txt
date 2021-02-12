@@ -29,3 +29,19 @@ signal_interpreter_server.exceptions.JsonParserError
 2021-02-12 12:07:26,995 - signal_interpreter_server.json_parser - ERROR - Requested signal not found in database, signal ID: 22 
 2021-02-12 12:07:26,996 - signal_interpreter_server.json_parser - INFO - Aborting server ...
 2021-02-12 12:07:26,997 - werkzeug - INFO - 127.0.0.1 - - [12/Feb/2021 12:07:26] "[33mPOST / HTTP/1.1[0m" 404 -
+2021-02-12 12:11:47,257 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-12 12:11:47,258 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-12 12:11:47,297 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-12 12:11:55,755 - signal_interpreter_server.json_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>
+2021-02-12 12:11:55,756 - signal_interpreter_server.json_parser - ERROR - Exception occurred:  
+Traceback (most recent call last):
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\json_parser.py", line 44, in get_signal_title
+    raise JsonParserError
+signal_interpreter_server.exceptions.JsonParserError
+2021-02-12 12:11:55,758 - signal_interpreter_server.json_parser - ERROR - Requested signal not found in database, signal ID: 22 
+2021-02-12 12:11:55,758 - signal_interpreter_server.json_parser - INFO - Aborting server ...
+2021-02-12 12:11:55,759 - werkzeug - INFO - 127.0.0.1 - - [12/Feb/2021 12:11:55] "[33mPOST / HTTP/1.1[0m" 404 -
+2021-02-12 12:12:09,575 - werkzeug - INFO - 127.0.0.1 - - [12/Feb/2021 12:12:09] "[37mPOST / HTTP/1.1[0m" 200 -
+2021-02-12 12:12:23,118 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_databas
+2021-02-12 12:12:23,119 - signal_interpreter_server.json_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'signal_databas' 
+2021-02-12 12:12:23,120 - signal_interpreter_server.json_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>

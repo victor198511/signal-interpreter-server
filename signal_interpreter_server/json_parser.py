@@ -1,21 +1,11 @@
 # json_parser.py
 # pylint: disable=missing-class-docstring
 
-import os
-import logging.config
 import logging
 import json
-import yaml
 from flask import abort
 from signal_interpreter_server.exceptions import JsonParserError
 
-
-CURR_DIR = os.path.abspath(os.path.dirname(__file__))
-LOG_SETTINGS_PATH = os.path.join(CURR_DIR, "..", "cfg", "log_settings.yaml")
-
-with open(LOG_SETTINGS_PATH, "r") as f:
-    config = yaml.safe_load(f.read())
-    logging.config.dictConfig(config)
 
 logger = logging.getLogger(__name__)
 
