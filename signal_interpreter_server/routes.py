@@ -19,7 +19,7 @@ def interpret_signal():
     id_of_requested_signal = data['signal']
     signal_title = json_parser.get_signal_title(id_of_requested_signal)
     try:
-        if signal_title == 'None':
+        if signal_title == "None":
             logger.info("Raising exception: %s", JsonParserError)
             raise JsonParserError
     except JsonParserError as err:

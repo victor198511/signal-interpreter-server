@@ -2,6 +2,7 @@ import json
 import pytest
 from unittest.mock import patch, mock_open
 from signal_interpreter_server.json_parser import JsonParser
+from signal_interpreter_server.exceptions import JsonParserError
 
 json_parser = JsonParser()
 json_parser.data = {"services": [{"title": "ECU Reset", "id": "11"}]}
@@ -10,6 +11,8 @@ json_parser.data = {"services": [{"title": "ECU Reset", "id": "11"}]}
 def test_load_file():
     with patch("builtins.open", mock_open(read_data=json.dumps({"services": [{"title": "ECU Reset", "id": "11"}]}))):
         assert json_parser.load_file("my_file_path") == {"services": [{"title": "ECU Reset", "id": "11"}]}
+    with pytest.raises(JsonParserError):
+        json_parser.load_file("my_file_path")
 
 
 json_parser2 = JsonParser()
