@@ -16,8 +16,6 @@ def test_interpret_signal(mock_get_signal_title, mock_abort):
         mock_get_signal_title.return_value = "Security Access"
         response = client.post("/", json=my_payload)
         assert response.get_json() == "Security Access"
-    with my_app_instance as client:
-        my_payload = {"signal": "27"}
         mock_get_signal_title.return_value = "None"
         client.post("/", json=my_payload)
         mock_abort.assert_called_once_with(404, description="Signal not found")

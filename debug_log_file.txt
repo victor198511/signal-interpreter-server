@@ -853,3 +853,16 @@ signal_interpreter_server.exceptions.JsonParserError
 2021-02-13 13:48:53,205 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_databas
 2021-02-13 13:48:53,205 - signal_interpreter_server.json_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'signal_databas' 
 2021-02-13 13:48:53,206 - signal_interpreter_server.json_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>
+2021-02-13 13:50:22,227 - signal_interpreter_server.json_parser - INFO - Opening json database file: my_file_path
+2021-02-13 13:50:22,229 - signal_interpreter_server.json_parser - INFO - Loading json database file: my_file_path
+2021-02-13 13:50:22,230 - signal_interpreter_server.json_parser - INFO - Opening json database file: my_file_path
+2021-02-13 13:50:22,230 - signal_interpreter_server.json_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'my_file_path' 
+2021-02-13 13:50:22,231 - signal_interpreter_server.json_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>
+2021-02-13 13:50:22,261 - signal_interpreter_server.routes - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>
+2021-02-13 13:50:22,262 - signal_interpreter_server.routes - ERROR - Exception occurred:  
+Traceback (most recent call last):
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 24, in interpret_signal
+    raise JsonParserError
+signal_interpreter_server.exceptions.JsonParserError
+2021-02-13 13:50:22,262 - signal_interpreter_server.routes - ERROR - Signal not found in database, signal ID: 27 
+2021-02-13 13:50:22,263 - signal_interpreter_server.routes - INFO - Aborting server ...
