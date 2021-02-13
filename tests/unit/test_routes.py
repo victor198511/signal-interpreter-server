@@ -1,8 +1,7 @@
 from unittest.mock import patch
-from signal_interpreter_server.routes import signal_interpreter_app
+
 from signal_interpreter_server.routes import JsonParser
-import pytest
-from flask import abort
+from signal_interpreter_server.routes import signal_interpreter_app
 
 
 @patch('signal_interpreter_server.routes.abort')
