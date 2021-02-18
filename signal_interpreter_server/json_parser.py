@@ -22,20 +22,14 @@ class JsonParser:
                 self.data = json.load(json_file)
                 return self.data
         except FileNotFoundError as err:
-            # logger.exception("Exception occurred %s ", err)
             logger.warning("Exception occurred %s ", err)
             logger.info("Raising exception: %s", JsonParserError)
             raise JsonParserError("Json database file is not found") from err
 
     def get_signal_title(self, identifier):
         # loop through all services in self.data
-        # if the service ID is the identifier, return the title
-        # service_title = "No signal title found for this id"
         service_title = "None"
         for service in self.data["services"]:
             if service["id"] == identifier:
                 service_title = service["title"]
         return service_title
-
-#            else:
-#                service_title = str("No signal title found for this id")

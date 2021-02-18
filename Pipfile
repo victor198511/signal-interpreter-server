@@ -10,6 +10,7 @@ patch = "*"
 pytest = "*"
 pylint = "*"
 pyyaml = "*"
+xmltodict = "*"
 
 [dev-packages]
 pycodestyle = "*"

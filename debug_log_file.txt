@@ -1111,3 +1111,313 @@ signal_interpreter_server.exceptions.JsonParserError
 2021-02-17 05:21:24,440 - signal_interpreter_server.routes - ERROR - Signal not found in database, signal ID: 22 
 2021-02-17 05:21:24,440 - signal_interpreter_server.routes - INFO - Aborting server ...
 2021-02-17 05:21:24,441 - werkzeug - INFO - 127.0.0.1 - - [17/Feb/2021 05:21:24] "[33mPOST / HTTP/1.1[0m" 404 -
+2021-02-18 18:20:03,823 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 18:20:03,824 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 18:20:03,845 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 18:20:13,882 - signal_interpreter_server.routes - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.JsonParserError'>
+2021-02-18 18:20:13,883 - signal_interpreter_server.routes - ERROR - Exception occurred:  
+Traceback (most recent call last):
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 24, in interpret_signal
+    raise JsonParserError
+signal_interpreter_server.exceptions.JsonParserError
+2021-02-18 18:20:13,884 - signal_interpreter_server.routes - ERROR - Signal not found in database, signal ID: 22 
+2021-02-18 18:20:13,884 - signal_interpreter_server.routes - INFO - Aborting server ...
+2021-02-18 18:20:13,885 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 18:20:13] "[33mPOST / HTTP/1.1[0m" 404 -
+2021-02-18 19:23:48,008 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.xml
+2021-02-18 19:23:48,009 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.xml
+2021-02-18 19:24:14,377 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:25:14,603 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:25:55,826 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:32:05,600 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:39:51,293 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:39:54,499 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:42:04,835 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 19:42:10,028 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_databa.xml
+2021-02-18 19:42:10,029 - signal_interpreter_server.xml_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'signal_databa.xml' 
+2021-02-18 19:42:10,029 - signal_interpreter_server.xml_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.XmlParserError'>
+2021-02-18 20:25:23,485 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_databa.xml
+2021-02-18 20:25:23,486 - signal_interpreter_server.xml_parser - WARNING - Exception occurred [Errno 2] No such file or directory: 'signal_databa.xml' 
+2021-02-18 20:25:23,487 - signal_interpreter_server.xml_parser - INFO - Raising exception: <class 'signal_interpreter_server.exceptions.XmlParserError'>
+2021-02-18 20:25:42,715 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 20:25:54,699 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 20:25:54,700 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 21:29:36,737 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 21:29:36,738 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 21:29:36,752 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 21:30:00,229 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 19, in interpret_signal
+    signal_title = parser_factory.get_signal_title(id_of_requested_signal)
+AttributeError: 'ParserFactory' object has no attribute 'get_signal_title'
+2021-02-18 21:30:00,234 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 21:30:00] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 21:32:27,774 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 21:32:27,791 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 21:32:37,683 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 19, in interpret_signal
+    signal_title = parser_factory.get_signal_title(id_of_requested_signal)
+AttributeError: 'ParserFactory' object has no attribute 'get_signal_title'
+2021-02-18 21:32:37,688 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 21:32:37] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 21:32:48,399 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 21:32:48,400 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 21:32:48,414 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 21:32:53,963 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 19, in interpret_signal
+    signal_title = parser_factory.get_signal_title(id_of_requested_signal)
+AttributeError: 'ParserFactory' object has no attribute 'get_signal_title'
+2021-02-18 21:32:53,966 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 21:32:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 21:49:52,712 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 21:49:52,713 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 21:49:52,731 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 21:49:58,739 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    signal_title = signal_interpreter_server.main.parser.get_signal_title(id_of_requested_signal)
+AttributeError: module 'signal_interpreter_server' has no attribute 'main'
+2021-02-18 21:49:58,742 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 21:49:58] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 21:56:49,371 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 21:56:49,371 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 21:56:49,387 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 21:56:53,123 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 19, in interpret_signal
+    signal_title = parser_factory.get_parser().get_signal_title(id_of_requested_signal)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 21:56:53,127 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 21:56:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:03:06,234 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 22:03:06,235 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 22:03:06,250 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:03:11,360 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    signal_title = signal_interpreter_server.main.factory.get_parser.get_signal_title(id_of_requested_signal)
+AttributeError: module 'signal_interpreter_server' has no attribute 'main'
+2021-02-18 22:03:11,363 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:03:11] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:05:17,688 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 22:05:17,688 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 22:05:17,703 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:05:23,222 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    signal_title = parser_factory.get_parser.get_signal_title(id_of_requested_signal)
+AttributeError: 'function' object has no attribute 'get_signal_title'
+2021-02-18 22:05:23,225 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:05:23] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:05:58,848 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 22:05:58,849 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 22:05:58,864 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:06:03,280 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    signal_title = parser_factory.get_parser().get_signal_title(id_of_requested_signal)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 22:06:03,283 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:06:03] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:14:02,981 - signal_interpreter_server.json_parser - INFO - Opening json database file: signal_database.json
+2021-02-18 22:14:02,981 - signal_interpreter_server.json_parser - INFO - Loading json database file: signal_database.json
+2021-02-18 22:14:02,998 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:14:08,053 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    parser = parser_factory.get_parser()
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 22:14:08,057 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:14:08] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:14:15,368 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    parser = parser_factory.get_parser()
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 22:14:15,370 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:14:15] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:14:59,643 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 22:14:59,658 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:15:05,181 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 20, in interpret_signal
+    parser = parser_factory.get_parser()
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 22:15:05,184 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:15:05] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:16:59,412 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 22:16:59,428 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:17:05,712 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 21, in interpret_signal
+    parser = parser_factory.get_parser()
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 22:17:05,715 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:17:05] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+2021-02-18 22:17:47,381 - signal_interpreter_server.xml_parser - INFO - Opening xml database file: signal_database.xml
+2021-02-18 22:17:47,396 - werkzeug - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2021-02-18 22:17:52,847 - signal_interpreter_server.routes - ERROR - Exception on / [POST]
+Traceback (most recent call last):
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vdykin\.virtualenvs\signal-interpreter-server--w0D5r3E\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\routes.py", line 21, in interpret_signal
+    parser = parser_factory.get_parser()
+  File "C:\Python27\PYTHON_COURSE_3\signal-interpreter-server\signal_interpreter_server\parser_factory.py", line 17, in get_parser
+    raise ValueError(self._signal_database_format)
+ValueError: None
+2021-02-18 22:17:52,850 - werkzeug - INFO - 127.0.0.1 - - [18/Feb/2021 22:17:52] "[35m[1mPOST / HTTP/1.1[0m" 500 -
