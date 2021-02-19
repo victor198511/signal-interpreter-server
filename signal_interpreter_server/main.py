@@ -2,7 +2,7 @@
 
 from argparse import ArgumentParser
 from signal_interpreter_server.routes import signal_interpreter_app
-from signal_interpreter_server.parser_factory import ParserFactory
+from signal_interpreter_server.routes import parser_factory
 from signal_interpreter_server.json_parser import JsonParser
 from signal_interpreter_server.xml_parser import XmlParser
 
@@ -14,7 +14,6 @@ def parse_arguments():
 
 
 def main():
-    parser_factory = ParserFactory()
     args = parse_arguments()
 
     if "xml" in args.file_path:
