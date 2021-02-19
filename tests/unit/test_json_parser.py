@@ -28,6 +28,3 @@ json_parser2.data = {"services": [{"title": "ECU Reset", "id": "11"}, {"title": 
 ])
 def test_get_signal_title(item, expected_title):
     assert json_parser2.get_signal_title(item) == expected_title
-
-# def test_get_signal_title():
-#    assert json_parser.get_signal_title("11") == "ECU Reset"

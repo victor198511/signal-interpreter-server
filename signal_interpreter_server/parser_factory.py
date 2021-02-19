@@ -1,4 +1,5 @@
 # parser_factory.py
+# pylint: disable=missing-class-docstring
 
 class ParserFactory:
     def __init__(self):
@@ -8,6 +9,9 @@ class ParserFactory:
     def set_signal_database_format(self, signal_database_format):
         self._signal_database_format = signal_database_format
 
+    def get_signal_database_format(self):
+        return self._signal_database_format
+
     def register_format(self, signal_database_format, parser):
         self._parsers[signal_database_format] = parser()
 
@@ -16,4 +20,3 @@ class ParserFactory:
         if not parser:
             raise ValueError(self._signal_database_format)
         return parser
-
