@@ -140,7 +140,10 @@ disable=print-statement,
         exception-escape,
         comprehension-escape,
         missing-module-docstring,
-        missing-function-docstring
+        missing-function-docstring,
+        protected-access,
+        unused-argument,
+        too-few-public-methods
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -319,7 +322,7 @@ indent-after-paren=4
 indent-string='    '
 
 # Maximum number of characters on a single line.
-max-line-length=100
+max-line-length=130
 
 # Maximum number of lines in a module.
 max-module-lines=1000
@@ -512,7 +515,7 @@ valid-metaclass-classmethod-first-arg=cls
 [DESIGN]
 
 # Maximum number of arguments for function / method.
-max-args=5
+max-args=10
 
 # Maximum number of attributes for a class (see R0902).
 max-attributes=7

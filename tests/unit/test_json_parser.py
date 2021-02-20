@@ -1,6 +1,6 @@
 import json
-import pytest
 from unittest.mock import patch, mock_open
+import pytest
 from signal_interpreter_server.json_parser import JsonParser
 from signal_interpreter_server.exceptions import JsonParserError
 

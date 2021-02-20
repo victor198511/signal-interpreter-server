@@ -12,11 +12,13 @@ COV_PATH = os.path.join(CURR_DIR, ".coveragerc")
 @task
 def style(_):
     call(f"pycodestyle {SRC_DIR} --ignore=E501", shell=True)
+    call(f"pycodestyle {UNIT_TEST_DIR} --ignore=E501", shell=True)
 
 
 @task
 def lint(_):
     call(f"pylint {SRC_DIR}", shell=True)
+    call(f"pylint {UNIT_TEST_DIR}", shell=True)
 
 
 @task
